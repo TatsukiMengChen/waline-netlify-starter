@@ -1,2 +1,6 @@
 [functions]
   directory = "netlify/functions/"
+[[redirects]]
+  from = "/ui/profile"
+  to = "/.netlify/functions/comment/ui/profile"
+  status = 200
