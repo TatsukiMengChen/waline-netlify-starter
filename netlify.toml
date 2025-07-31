@@ -1,6 +1,16 @@
 [functions]
   directory = "netlify/functions/"
+  
 [[redirects]]
   from = "/ui/profile"
   to = "/.netlify/functions/comment/ui/profile"
   status = 200
+  
+[[plugins]]
+  package = "netlify-plugin-inline-functions-env"
+
+[plugins.inputs]
+  include = ["SITE_NAME"]
+
+[build.environment]
+  SITE_NAME = "梦辰の小窝"
